@@ -11,6 +11,7 @@ $msg_hi = array("Привет.", "Привет!", "Приветствую.", "П
 $msg_by = array("Пока!", "Всего доброго!", "До связи!", "До встречи!", "Если что, я - тут.");
 $msg_accesDenied = array("Это закрытый навык.", "Мне нельзя общаться с чужими.", "Мне не разрешают общаться с чужими.");
 $msg_hi = $msg_hi[shuffle($msg_hi)];
+$msg_by = $msg_by[shuffle($msg_by)];
 $msg_accesDenied = $msg_accesDenied[shuffle($msg_accesDenied)];
 
 include_once("./config.php");
@@ -25,7 +26,7 @@ $keyword = gg('ThisComputer.keyword');
 $yandexID = gg('ThisComputer.yandexID');
 
 $speech = 'Принято: '.$text;
-if ($text == 'пока') {$speech = "Пока!"; goto answer2yandex;}
+if ($text == 'пока') {$speech = $msg_by; goto answer2yandex;}
 if ($text == $keyword) {
   say("Идентификатор пользователя изменён!\nБыл  ".$yandexID.",\nстал ".$user_id, -1);
   sg('ThisComputer.yandexID', $user_id);
