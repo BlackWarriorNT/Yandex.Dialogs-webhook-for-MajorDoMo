@@ -37,7 +37,6 @@ if ($sessionnew == true) {
   if ($user_id != $yandexID) {$speech = $msg_hi." Простите, но это закрытый навык и он только для моей семьи."; goto answer2yandex;}
   $speech = $msg_hi." Чем могу помочь?";}
 if ($user_id != $yandexID) {$speech = $msg_accesDenied; goto answer2yandex;} else {say(htmlspecialchars($text), 0, 1);}
-//if ($sessionnew == true) {$speech = $msg_hi." Чем могу помочь?";}
 
 answer2yandex:
 $response = new \stdClass();
