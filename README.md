@@ -1,2 +1,2 @@
 # webhook_yandex.php
-webhook Яндекс.Диалогов для использования в системе MajorDoMo
+webhook для использования Яндекс.Диалогов в системе MajorDoMo
